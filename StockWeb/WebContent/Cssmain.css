@@ -205,7 +205,7 @@ body{
 .left-bottom-half
 {
 	height:50%;
-	background-color:gray;
+	background-color:white;
 }
 
 
@@ -285,6 +285,27 @@ body{
 	vertical-align: top;
 	background-color:  #5E5E5E;
 	color: white;
+}
+
+/*--------------------------------------------------바텀 테이블1 시작*/
+.left-bottom-div1{
+	margin-top:5px;
+	height:auto;
+}
+
+.left-bottom-div1-table1{ /*년도 적혀있는 테이블 설정*/
+	width:750px; /*꽉채우기위함*/
+	height:150px;
+	border-top: 3px solid black;
+    border-bottom: 1px solid gray;    
+    border-collapse: collapse;       /*구분선이 없음*/
+    
+}
+
+
+.left-bottom-div1-table1 tr:nth-child(1)/*주의 : boder-collapse가 없으면 실행이안됨*/
+{
+	border-top:1px solid black; 
 }
 
 
