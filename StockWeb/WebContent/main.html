@@ -276,8 +276,8 @@
 						<input class="search-but1"  type="button" value="참고"/>
                      	<input class="search-but2"  type="button" value="조회"/>
                      </div><!--left-bottom-top-search닫음  -->
-                     <div class="left-bottom-div1">
-                     	<table class="left-bottom-div1-table1">
+					  <div class="left-bottom-div1">
+                     	<table class="left-bottom-div1-table">
                      		<thead>
                      		<tr>
                      			<th>일자</th>
@@ -295,7 +295,7 @@
                      		<tr>
                      			<td>2014/11/27</td>
                      			<td>1,264,000</td>
-                     			<td><span>▲</span>63,000</td>
+                     			<td><span class="updown">▲</span>63,000</td>
                      			<td>5.25%</td>
                      			<td>3,791</td>
                      			<td>-152,399</td>
@@ -306,7 +306,7 @@
                      		  <tr>
                      			<td>2014/11/26</td>
                      			<td>1,201,000</td>
-                     			<td><span>▲</span>11,000</td>
+                     			<td><span class="updown">▲</span>11,000</td>
                      			<td>0.92%</td>
                      			<td>64,552</td>
                      			<td>-10,915</td>
@@ -317,7 +317,7 @@
                      		 <tr>
                      			<td>2014/11/25</td>
                      			<td>1,190,000</td>
-                     			<td><span>▼</span>30,000</td>
+                     			<td><span class="updown">▼</span>30,000</td>
                      			<td>-2.46%</td>
                      			<td>-76,809</td>
                      			<td>44,096</td>
@@ -328,7 +328,7 @@
                      	   <tr>
                      			<td>2014/11/24</td>
                      			<td>1,220,000</td>
-                     			<td><span>▼</span>3,000</td>
+                     			<td><span class="updown">▼</span>3,000</td>
                      			<td>-0.25%</td>
                      			<td>-29,336</td>
                      			<td>5,867</td>
@@ -350,9 +350,131 @@
                      		</tr>
                      	</tbody>
                      </table>
-                    </div><!--left-bottom-div1닫음  -->
+                     <div class=left-last-button>
+                       <button type="button">처음으로</button>
+                    	<button type="button">다음</button>
+                     </div>
+                    </div><!--left-bottom-div1닫음-->
+                    <div class=left-bottom-div2>
+                    	<table class=left-bottom-div2-table1 >
+                    	<thead>
+                    		<tr>
+                    			<th>매도상위</th>
+                    			<th>매도수량</th>
+                    			<th>매수상위</th>
+                    			<th>매수수량</th>
+                    		</tr>
+                    	</thead>
+                       	<tbody>
+                    		<tr>
+                    			<td>CLSA</td>
+                    			<td>147,262</td>
+                    			<td>모건스텐리</td>
+                    			<td>123,998</td>
+                    		</tr>
+                    		<tr>
+                    			<td>우리투자</td>
+                    			<td>79,476</td>
+                    			<td>신한투자</td>
+                    			<td>58,093</td>
+                    		</tr>
+                    		<tr>
+                    			<td>도이치</td>
+                    			<td>69,876</td>
+                    			<td>골드만삭스</td>
+                    			<td>53,946</td>
+                    		</tr>
+                    		<tr>
+                    			<td>삼성증권</td>
+                    			<td>55,457</td>
+                    			<td>삼성증권</td>
+                    			<td>48,427</td>
+                    		</tr>
+                    		<tr>
+                    			<td>키움증권</td>
+                    			<td>45,899</td>
+                    			<td>JP모간</td>
+                    			<td>44,744</td>
+                    		</tr>
+                    		<tr>
+                    			<td>외국계합</td>
+                    			<td>228,934</td>
+                    			<td>외국계합</td>
+                    			<td>264,481</td>
+                    		</tr>
+                    	</tbody>
+                    	</table>
+                    	<span>회사명 : CLSA</span> <!-- span설정을 따로해주었음. -->
+                    	<table class="left-bottom-div2-table2" >
+                    		<thead>
+                    		<tr>
+                    			<th>일자</th>
+                    			<th>매도</th>
+                    			<th>매수</th>
+                    			<th>순매수</th>
+                    		</tr>
+                    		</thead>
+                    		<tbody>
+                    			<tr>
+                    				<td>2014/11/26</td>
+                    				<td>4,288</td>
+                    				<td>3,353</td>
+                    				<td>-935</td>
+                    			</tr>
+                    			<tr>
+                    				<td>2014/11/25</td>
+                    				<td>3,161</td>
+                    				<td>15,135</td>
+                    				<td>11,974</td>
+                    			</tr>
+                    			<tr>
+                    				<td>2014/11/24</td>
+                    				<td>35,637</td>
+                    				<td>9,789</td>
+                    				<td>-25,848</td>
+                    			</tr>
+                    			<tr>
+                    				<td>2014/11/21</td>
+                    				<td>374</td>
+                    				<td>2,171</td>
+                    				<td>1,753</td>
+                    			</tr>
+                    			<tr>
+                    				<td>2014/11/20</td>
+                    				<td>41,884</td>
+                    				<td>37,889</td>
+                    				<td>-3,995</td>
+                    			</tr>
+                    		</tbody>
+                    	</table>
+                    </div><!--left-bottom-div1닫음-->
                 </div><!-- left-bottom-half닫음 -->
             </div><!--left-div 닫음 -->
+            <div class="right-div">
+            	<div class="right-div-top-half">
+            		<div class="right-top-menu">
+            			<button>현재가</button>
+            		    <button>체결/거래원</button>
+            		    <button>일별</button>
+            		    <button>시간별</button>
+            		    <button>상세1</button>
+            		    <button>상세2</button>
+            		</div> <!-- right-top-menu닫음 -->
+            		
+            	<div class="right-top-search">
+            		  <select  name="number">
+							<option value="005930">005930</option>
+							<option value="005931">005931</option>
+							<option value="005932">005932</option>
+							<option value="005933">005933</option>
+					</select>
+					<button class="white-search-image"></button>
+					<input class="search-text" type="text" value="삼성전자" />
+            		
+            	</div>	<!--right-top-search닫음  -->
+            	</div><!--right-div-top-half닫음 -->
+            </div><!--right-div 닫음 -->
+            
         </div> <!--main 닫음 -->
     </body>
 </html>
