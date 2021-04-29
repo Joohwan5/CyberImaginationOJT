@@ -1,182 +1,211 @@
 
+html
+{
+	font-size: 12px;
+}
+
+div{
+	display: inline-block;
+}
+th{
+	font-weight: normal;
+}
+
+
+.arrow{ /*화살표는 따로 지정하여 관리 (왼쪽정렬)*/
+	float: left;
+}
 
 #main{                      /*전체 총크기 생성*/
 	/*display: block;       /*블럭 지정 */
 	width: 1150px;        /*너비 1150픽셀 생성*/
 	height: 100%;        /*높이 전부사용*/
-	/*margin-left: auto;  
-	margin-right: auto;*/
-	font-size: 12px;
+	margin-left: auto;  
+	margin-right: auto;
 	/*margin-top: 50px;*/
-	
-}
-/*------------------------------왼쪽-------------------------------------*/
-
-.left-div{ /*왼쪽 위에 큰 블럭 생성*/
-	width: 755px; 
-	height: 1000px;
-	float: left; /*왼쪽에 부유하는 블록 박스 생성*/
 }
 
-.left-div-top-half{
-	height: 50%; /*높이 반만 사용*/
-	background-color: green; 
+
+/*-----------------------------------------------------------------------------왼쪽(Left)-----------------------------------------------------------------------*/
+.left-div{ /*왼쪽 전체 부분 생성*/
+	width: 755px;  /*넓이 755*/
+	height: auto; /*높이 자동*/
+	float: left;   /* 왼쪽에 생성 (나중에 오른쪽블럭을 생성할 때 필요 이게없으면 오른쪽에있는것들이 밑으로가버림.)*/
 }
+
+.left-div-top-half{ /*왼쪽 상단부분 영역 지정*/
+	height: 50%;    /* 높이 반만 사용*/
+	background-color: yellow;
+}
+
 /*------------------------------왼쪽 상단버튼*/
-.left-div-1-top-menu{ /* Top 메뉴 */
-	display: inline-block; /*줄바꿈 되지않고 생성됨.*/
-	width: 100%;
-	height: auto;
+.left-top-menu{                   /* Top 메뉴 버튼 영역설정 */
+	display: inline-block;       /*줄바꿈 되지않고 생성됨.*/
+	width: 100%;                    
+	height: auto;            
 	/*margin-top: 5px;*/
 }
 
-.left-div-1-top-menu button{ /*왼쪽 맨위 : 버튼설정*/
-   width: auto;            /*버튼 너비*/
-   height: 30px;          /*높이*/
-   /*margin-top: 5px;          /*버튼 마진*/
-   margin-left: 0.2em;       /*버튼 맨 왼쪽 마진*/
-   float:left;
-   margin-right:-2px;
+.left-top-menu button{ /*왼쪽 맨위 : 버튼 설정*/
+   height: 30px;             /*높이*/
+   /*margin-top: 5px;        /*버튼 마진*/
+   float:left;               /*왼쪽 정렬 float: left 시 밑에 약간띄워짐 주의할것*/
+   border: none;             
+   margin-right:2px;
+	width : auto;
+   height: 30px;           /*높이*/
+   background-color: #E6E6E6;
 }
 
-.left-div-1-top-menu button:nth-child(6){        /*6번째 요소를 선택하는 것.*/
+.left-top-menu button:nth-child(6){   /*6번째 요소를 선택하는 것.*/
    color: white;                                     
-   background-color: #5E5E5E; 
-}
-/*------------------------------왼쪽 상단 라디오 박스*/
-.left-div-1-top-radio{ /*왼쪽상단의 라디오버튼*/
-	display: inline-block; /*한라인을 블럭으로 감싼다.*/
-	/* float:left;  이거하면 블록이 풀린다 왠지는모르겠다 주의하자~*/
-	
-	width: 750px;
-	height: 35px;
-	border: 1px solid #E4E4E4;
-	
-	margin-left: 0.25em;
-	margin-top: 2px;
-	margin-bottom: 2px;
-	
-	box-sizing: border-box;
-	background-color:#EAEAEA; 
-	
-	padding-left: 6px; /*시장구분 왼쪽 공백넣기*/
-	padding-right: 3px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+   background-color: #585858; 
 }
 
-.left-div-1-top-radio-group{
-		height: auto;
-		display: inline;
-}
-.menubar-btn{
-	float: right;
-	color: white;                                     
-   	background-color: #5E5E5E; /*다크그레이색상*/
+/*------------------------------왼쪽 상단 라디오 박스000*/
+.left-div-top-radio{ /*왼쪽상단의 라디오 영억 지정*/
+
+	margin-top:3px; /*라디오와 위의 버튼 사이간격 */
+	
+	display: inline-block; /*한라인을 블럭으로 감싼다.*/
+	border: 1px solid gray; /*앞옆뒤 모두 라인생성*/
+	
+	width: 755px;
+	height:35px;
+	background-color:#E6E6E6; 
+	
+	box-sizing:border-box; /*패딩값으로 밀리는걸 방지해줌 (중요)*/
+	padding: 5px;  /*상하좌우 모두 밑에서 좌는 10px으로 바꿈*/
+	padding-left: 10px; /* 시장지수부터 섹터지수 까지를말함*/
 	
 }
+
+.left-div-top-radio-group{ /*라디오만 해당되는 영역*/
+	height: auto;
+	float:left; /*이걸 하므로인해 밑에 약간띄워짐(br느낌으로다가 margin을 좀 키움.*/
+	display: inline;
+}
+.left-top-menubar-btn{ /*라디오 그룹을 벗어난 다른영역*/
+	float:right; /* 제일상위인 라디오영역에서 오른쪽에 배치 64번째줄에 오른쪽에 5px띄워짐 */
+	color: white;                                  
+   	background-color: #585858; /*다크그레이색상*/
+}
+
 
 /*----------------------------------------------------------테이블1---------------------------------------------------------------------*/
-.left-table-1{
-   border:hiden;
-   border-top: 3px solid black; /*위쪽 테두리 설정 solid는 일반적 라인테두리  */
-   border-bottom: 1px solid black;
-   width: 370px; /*755의 절반*/
-   height:370px;
+.left-table1{
+   margin-top: 3px;         /*위쪽 마진 2px*/
+   /*테이블 고정값*/
    box-sizing: border-box;  
-   margin-top: 4px;         /*위쪽 마진 2px*/
-   margin-left:0.2em;
-   margin-right:10px; /*오른쪽 공간 */
-   border-collapse: collapse; /*구분선이 없음*/
-   float:left; /*테이블 두 개 나란히 놓기 */
+   border-top: 2px solid #585858; /*위쪽 테두리 설정 solid는 일반적 라인테두리  */
+   border-bottom: 1px solid #585858;
+   	border-collapse: collapse; /*구분선이 없는 테이블 (구분선이 없어지면서 크기가 조금 줄어듬)*/
+   
+   /*border-collapse: collapse; /*구분선이 없는 테이블 (구분선이 없어지면서 크기가 조금 줄어듬) ----위에선언됨*/
+   width: 370px; /*755의 절반*/
+   height:auto; /*밑에 tr로 크기 설정*/
+   float:left; /*테이블 두 개 나란히 놓기위함 */
 }
 
-.left-table-1 thead tr{ /*헤드부분 높이 조절*/
+
+
+.left-table1 tr /*테이블 공통 속성 height*/
+{
 	height:30px;
+	
+}
+/*.left-table1 td /*테이블 공통 속성 width
+{
+	width:46.25px;  375의 열의 개수인 4등분 한것.
+}*/
+
+/*중요~~~~~~~~~*/
+.left-table1 tr:nth-child(n) td:nth-child(3){ /*애로우를 띄우기위해 width를 조절*/
+   width:55px;
 }
 
-.left-table-1 tr:nth-child(1) { /*업종 밑에 까만선 하나*/
+.left-table1 tr:nth-child(n) td:nth-child(2){ /*애로우를 띄우기위해 지수의 패딩오른쪽값을 띄움*/
+   padding-right:35px;
+}
+
+
+.left-table1 tr:nth-child(1) { /*업종 밑에 까만선 하나 border-callapse가 있어야가능*/
    border-top:1px solid black;
 }
 
-.left-table-1 td:nth-child(1){
+.left-table1 td:nth-child(1){ /*업종 왼쪽정렬*/
    text-align: left;
-   width: 35%;
 }
 
-.left-table-1 td:nth-child(2){
+.left-table1 td:nth-child(n+2){ /* 지수, 전일비 등락률 오른쪽정렬*/
 	text-align:right;
-	padding-right:10px;
 }
 
-
-.left-table-1 td:nth-child(3){
-   text-align: right;
-   width: 60px;
-   
+.left-table1 tbody tr:nth-child(odd){ /*홀수 행 색깔변경*/
+   background-color: #E6E6E6;
 }
-.left-table-1 td:nth-child(4){
-     text-align: right;
+.left-table1 tbody tr:nth-child(5){ /*다섯번째줄 노란색*/
+	background-color: #F3E2A9;
 }
 
-
-.left-table-1 tbody tr:nth-child(odd){
-   background-color: #EAEAEA;
-}
-.left-table-1 tbody tr:nth-child(5){ /*다섯번째줄 노란색*/
-	background-color: #FCF3D0;
-}
-
-.left-table-1 tbody tr:nth-child(1) td:nth-child(n+2){/*첫번째 tr에서 업종제외하고 나머지는 red*/
+.left-table1 tbody tr:nth-child(1) td:nth-child(n+2){ /*첫번째 tr에서 업종제외하고 나머지는 red*/
 	color: red;
 }
 
-.left-table-1 tbody tr:nth-child(2) td:nth-child(n+2){
+.left-table1 tbody tr:nth-child(2) td:nth-child(n+2){
 	color: red;
 }
 
-.left-table-1 tbody tr:nth-child(10) td:nth-child(n+2){
+.left-table1 tbody tr:nth-child(10) td:nth-child(n+2){
 	color: red;
 }
 
-
-.left-table-1 tbody td:nth-child(n+2){ /*나머지는 모두 블루*/
+.left-table1 tbody td:nth-child(n+2){ /*나머지는 모두 블루*/
 	color: blue;
 }
 
 
 /*------------------------------------------------------------------테이블2 ---------------------------------------------------------*/
 .left-table-2{
-	border-top: 3px solid;
-	border-bottom: 1px solid black;
-	margin-top:4px; 
-	width: 370px;
-	height:370px;
-	border-collapse: collapse; /*구분선이 없음*/
+	margin-top:3px;
+	box-sizing:border-box;
+	float:right; /*오른쪽 정렬*/
+	width: 370px; /*테이블 2개 370씩 나머지 10은 right정렬로인해 자동으로 10띄워짐 */
+	border-top: 2px solid #585858;
+	border-bottom: 1px solid #585858;
+	border-collapse: collapse; /*구분선이 없는 테이블 (구분선이 없어지면서 크기가 조금 줄어듬)*/
+	height:auto;
 }
 
 
-
-.left-table-2 thead tr{ /*헤드부분 높이 조절*/
+.left-table-2 tr{ /*테이블 공통속성*/
 	height:30px;
 }
+
 .left-table-2 tr:nth-child(1) { /*종목명 밑에 까만선 하나*/
-   border-top:1px solid black;
+   border-top:1px solid black;   
+ 
 }
+/*애로우설정*/
+.left-table-2 tr:nth-child(n) td:nth-child(3){ /*애로우를 띄우기위해 width를 조절*/
+   width:55px;
+}
+/*애로우설정*/
+.left-table-2 tr:nth-child(n) td:nth-child(2){ /*애로우를 띄우기위해 2열의 패딩라이트를 조절*/
+   padding-right: 25px;
+}
+
+
 
 .left-table-2 tbody tr:nth-child(n) td:nth-child(n+2) /*첫번째항목은 빼고 나머지 오른쪽 정렬*/
 {    
    text-align: right;
 }
 
-.left-table-2 td:nth-child(3){
-   text-align: right;
-   padding-left: 15px;
-}
 
 
 .left-table-2 tbody tr:nth-child(odd){
-	background-color: #EAEAEA;
+	background-color: #E6E6E6;
 }
 .left-table-2 tbody td:nth-child(n+2)
 {
@@ -187,134 +216,156 @@
 	color:black;
 }
 
+
+
 .left-last-button /*버튼을감싸는 범위 지정*/
 {
 	margin-top: 5px;
 	width:100%;
 	height:30px;
-	text-align: right;
+	box-sizing: border-box; /*패딩값이 못튀어나가도록 막음*/
+	text-align:right;
+	padding-left:3px;
 }
-.left-last-button button /*처음으로 다음 간격 조정, 실제버튼의 크기를 조정*/
-{
-	margin-right:0.2em;
-	margin-left:-6px;
-	/*height:30px;*/
+.left-last-button button{
+	background-color: white;
+	border: 1px solid #E6E6E6;
+	height:30px;
 }
-.updown{
-	float: left;
-}
+
+
+
+
 /*--------------------------------------------------------------------------------------------왼쪽 상단 끝------------------------------------------------------*/
 
 .left-bottom-half
 {
 	height:50%;
-	background-color: yellow;	
+	background-color: green;
 }
 
 
 .left-bottom-top-menu
 {
+	
+	margin-top:10px;                       /*왼쪽 상단과의 간격*/
 	width: 100%;
 	display:inline-block;
 	height:auto;
-	margin-left: 0.2em;
-	margin-top:5px;
+	
+}
+
+_:-ms-fullscreen, :root .left-bottom-top-menu{
+	text-align: left;
 }
 .left-bottom-top-menu button/*버튼여러개*/
 {
+	float:left;
 	height:30px;
-	width:auto;
-	margin-left: -4px; 
+    width:auto;
+	margin-right:2px;
+	border:none;
+	background-color: #E6E6E6;/*버튼색깔*/
+	
 }
 .left-bottom-top-menu button:nth-child(5) /*매매동향 까맣게*/
 {
-	background-color:  #5E5E5E;
+	background-color:  #585858;
 	color: white;
 }
 
 .left-bottom-top-search{
-	width:750px; /*라인끝에 살짝 띄우기위해 */
+	display: inline-block;       /*줄바꿈 되지않고 생성됨.*/
+	width:100%; /*라인끝에 살짝 띄우기위해 */
 	height:35px;
-	box-sizing:border-box;
+	box-sizing:border-box; /*패딩값 막기위함*/
+	
 	display:inline-block; /*한라인에 다넣기위해*/
-	border: solid px1 gray;
-	background-color:#EAEAEA; 
-	margin-left:0.2em;
-	margin-top:2px;
+	border: 1px solid  gray;
+	
+	background-color:#E6E6E6; 
+	margin-top:3px;
+	
+	
 	
 }
 .left-bottom-top-search select{ /*콤보박스 설정*/
-	margin-top:5px;
+	margin-top:4px;
 	margin-left:8px;
-	margin-bottom:5px;
 	width:90px;
 	height:25px;
 	
 }
 
+
 .white-search-image{
 	background-image: url("돋보기_흰색.png");
-	width: 27px;
-	height: 27px;
-	margin-top:3px;
+	width: 26px;
+	height: 26px;
+	margin-top:4px;
 	vertical-align: top;
+	box-sizing: border-box;
+	border: 1px gray;
 }
+
+
 .search-text /*삼성전자 text*/
 {
-	
+		
+	box-sizing: border-box;
 	width: 80px; /*텍스트를 띄움으로 자동으로 버튼두개가 움직임.*/
-	height: 25px;
+	height: 26px;
 	background-color: #E6E6E6;
 	padding-left: 10px;
+	vertical-align: -1px;
+	
+	
 	border:inherit;
 	background-color: lightgray;
-	text-align: left;
 	
 }
 
 .search-info-text
 {
 	height: 20px;
-	margin-left:181px;      /*당일데이터입력시간 띄우기*/
+	margin-left:198px;      /*당일데이터입력시간 띄우기 이걸로 버튼 두개 옆으로 땡김.*/
 }
 
 /*버튼설정*/
 .search-but1 {
-	margin-top:3px;
-	height:25px
+	vertical-align: -1px;
 }
 .search-but2 {
-	margin-top:5px;
 	background-color:  #5E5E5E;
 	color: white;
-	height:25px
+	vertical-align: -1px;
 	
 }
 /*--------------------------------------------------바텀 테이블1 시작*/
 .left-bottom-div1{
-	margin-top:5px;
+	margin-top:3px;
+	display:inline-block;
 	height:auto;
+	width:100%;
 }
 
 .left-bottom-div1-table{ /*년도 적혀있는 테이블 설정*/
-	width:750px; /*꽉채우기위함*/
+	width:100%; /*꽉채우기위함*/
 	height:150px;
-	border-top: 3px solid black;
+	border-top: 2px solid  #E6E6E6;
     border-bottom: 1px solid gray;    
     border-collapse: collapse;       /*구분선이 없음*/
-    margin-left:0.2em;
     box-sizing: border-box;
 }
 
+/*테이블 공통크기*/
+.left-bottom-div1-table tr{
+	height:30px;
+}
 
 .left-bottom-div1-table tr:nth-child(1)/*주의 : boder-collapse가 없으면 실행이안됨*/
 {
 	border-top:1px solid black; 
-}
-
-
-.left-bottom-div1-table th{
-	height:20px;
 }
 
 
@@ -385,7 +436,6 @@
 }
 
 /*처음으로, 다음 버튼은 위에사용했떤 버튼을 사용한다*./
-
 /*-----------------------------------바텀두번째 테이블1---------------------------------*/
 .left-bottom-div2
 {
@@ -542,44 +592,114 @@
 /*--------------------------------------------------------------------------------------------왼쪽 하단 끝------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------왼쪽 끝------------------------------------------------------*/
 
-.right-div{ /*왼쪽 위에 큰 블럭 생성*/
+.right-div{ /*오른쪽 상단 블럭 생성*/
 	width: 380px; 
-	height: 1000px;
-	margin-left:15px;
-	float: left; /*왼쪽에 부유하는 블록 박스 생성*/
+	height: 1007px;  /*auto로 바꾸기*/
+	margin-left:15px; /*왼쪽부분과 오른쪽 부분을 띄움*/
+	float: left; /*왼쪽에 left가 있으니 그 다음으로 오기때문에 옆에 생성되게한다.*/
 }
 
 
 .right-div-top-half{/*반절 시작*/
 	width:100%;
 	height:50%;
-	background-color: gray; 
 }
 
-
+/*탑메뉴 */
 .right-top-menu{
-	display:inline-block;
 	width:100%;
+	display:inline-block;
+	
 }
-
-
 .right-top-menu button{
 	float:left;
+	border:none;
+	box-sizing:border-box;
 	height:30px;
+    margin-right:2px;
+	
 }
 
+
+
+/*---------탑서치-----------*/
 .right-top-search{
-	margin-top: 2px;
+	margin-top: 3px;
 	display: inline-block; /*한줄로해야하기때문에 반드시 핌요*/
 	width:100%;
 	height:35px;
 	background-color: #EAEAEA;
+	border:1px solid gray;
+	box-sizing: border-box;
 }
 
+
 .right-top-search select { /*콤보박스 설정*/
-	margin-top:5px;
+	margin-top:4px;
 	margin-left:8px;
 	width:90px;
 	height:25px;
+	
 }
+
+.right-top-menu button:nth-child(1)
+{
+	background-color:  #5E5E5E;
+	color: white;
+}
+
+.search-but3 
+{
+	height:26.5px;
+	float:right;
+	margin-top:3.5px; 
+	margin-right:3px; 
+}
+
+
+/*---------한줄 테이블-----------*/
+.right-group1 /*한줄 테이블을 묶기*/
+{
+	height:auto;
+	width:100%;
+}
+
+.right-table1
+{
+	margin-top:6px; /*레프트 와 띄우기를 같이해야하기때문에 6px */
+	border-bottom:1px solid #585858 ; /**/
+	border-top:2px solid #585858;
+	border-collapse: collapse;
+	box-sizing: border-box;
+	
+}
+.right-table1 thead tr
+{
+	height:25px;
+	font:normal;
+	
+}
+.right-table1 th
+{
+	font-weight:normal; /*th는 원래 bold한데 폰트를 다시 노말로 바꿔주는것*/
+}
+.right-table1 th:nth-child(n+2)
+{
+	width:80px;
+	
+	
+}
+
+.right-table1 th:nth-child(1)
+{
+	padding-left:5px;
+	width:20px;
+	
+}
+.right-table1 th:nth-child(n+3):nth-child(-n+5)
+{
+	color:red;
+}
+
+
 
