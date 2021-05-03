@@ -775,6 +775,7 @@ _:-ms-fullscreen, :root .search-text{
 	
 }
 
+
 .right-super-table th:nth-child(3)  /*세번째열 늘리기*/
 {
 	width:100px;
