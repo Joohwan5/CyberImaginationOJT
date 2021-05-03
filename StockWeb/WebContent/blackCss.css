@@ -2,7 +2,6 @@ html
 {
 	font-size: 12px;
 }
-
 div{
 	display: inline-block;
 }
@@ -10,19 +9,25 @@ th{
 	font-weight: normal;
 }
 
+button{
+	color:white; /*버튼글자 모두 하얀색으로*/
+}
 
 .arrow{ /*화살표는 따로 지정하여 관리 (왼쪽정렬)*/
 	float: left;
 }
 
 #main{                      /*전체 총크기 생성*/
-	display: block;       /*블럭 지정하고 마진을 left,right auto로 설정하면 가운데로간다. */
 	width: 1150px;        /*너비 1150픽셀 생성*/
-	height: 100%;        /*높이 전부사용*/
-	margin-left: auto;  
+	height: 1065px;        /*높이 전부사용*/
+	
+	margin-left: auto;
 	margin-right: auto;
-	/*background-color: #585858;*/
+	display: block;
 	/*margin-top: 50px;*/
+	background-color:#2e313a; /*블랙*/
+	
+	
 }
 
 
@@ -31,11 +36,13 @@ th{
 	width: 755px;  /*넓이 755*/
 	height: auto; /*높이 자동*/
 	float: left;   /* 왼쪽에 생성 (나중에 오른쪽블럭을 생성할 때 필요 이게없으면 오른쪽에있는것들이 밑으로가버림.)*/
+	background-color:#2e313a; /*블랙*/
+	
 }
 
 .left-div-top-half{ /*왼쪽 상단부분 영역 지정*/
 	height: 510px;    /* 높이 반만 사용*/
-	background-color: yellow;
+	border:1px solid black;
 }
 
 /*------------------------------왼쪽 상단버튼*/
@@ -50,16 +57,16 @@ th{
    height: 30px;             /*높이*/
    /*margin-top: 5px;        /*버튼 마진*/
    float:left;               /*왼쪽 정렬 float: left 시 밑에 약간띄워짐 주의할것*/
-   border: none;             
-   margin-right:2px;
+   border: 1px solid black;             
 	min-width:50px ;
    height: 30px;           /*높이*/
-   background-color: #E6E6E6;
+   background-color: #454550;
+   
 }
 
 .left-top-menu button:nth-child(6){   /*6번째 요소를 선택하는 것.*/
    color: white;                                     
-   background-color: #585858; 
+   background-color: #078b71; 
 }
 
 /*------------------------------왼쪽 상단 라디오 박스000*/
@@ -67,15 +74,13 @@ th{
 
 	margin-top:3px; /*라디오와 위의 버튼 사이간격 */
 	
-	display: inline-block; /*한라인을 블럭으로 감싼다.*/
-	border: 1px solid gray; /*앞옆뒤 모두 라인생성*/
+	border: 1px thick; /*앞옆뒤 모두 라인생성*/
 	
 	width: 755px;
 	height:35px;
-	background-color:#E6E6E6; 
-	
+	background-color:#454550; 
 	box-sizing:border-box; /*패딩값으로 밀리는걸 방지해줌 (중요)*/
-	padding: 5px;  /*상하좌우 모두 밑에서 좌는 10px으로 바꿈*/
+	padding-right: 5px;  /*상하좌우 모두 밑에서 좌는 10px으로 바꿈*/
 	padding-left: 10px; /* 시장지수부터 섹터지수 까지를말함*/
 	
 }
@@ -83,12 +88,19 @@ th{
 .left-div-top-radio-group{ /*라디오만 해당되는 영역*/
 	height: auto;
 	float:left; /*이걸 하므로인해 밑에 약간띄워짐(br느낌으로다가 margin을 좀 키움.*/
-	display: inline;
+	color:white;
+	margin-top: 5px;  /*상하좌우 모두 밑에서 좌는 10px으로 바꿈*/
+	
 }
 .left-top-menubar-btn{ /*라디오 그룹을 벗어난 다른영역*/
 	float:right; /* 제일상위인 라디오영역에서 오른쪽에 배치 64번째줄에 오른쪽에 5px띄워짐 */
 	color: white;                                  
-   	background-color: #585858; /*다크그레이색상*/
+   	background-color: #eea817; /*다크그레이색상*/
+   	color:black;
+   	height:25px;
+   	border:1px solid black;
+   		margin-top: 5px;  /*상하좌우 모두 밑에서 좌는 10px으로 바꿈*/
+   	
 }
 
 
@@ -96,7 +108,7 @@ th{
 .left-table-div{
 	display: inline-block;       /*줄바꿈 되지않고 생성됨.*/
 	width: 100%;                    
-	height: auto;         
+	height: auto;
 	/*margin-top: 5px;*/
 }
 .left-table1{
@@ -105,14 +117,28 @@ th{
    box-sizing: border-box;  
    border-top: 2px solid #585858; /*위쪽 테두리 설정 solid는 일반적 라인테두리  */
    border-bottom: 1px solid #585858;
-   	border-collapse: collapse; /*구분선이 없는 테이블 (구분선이 없어지면서 크기가 조금 줄어듬)*/
+   border-collapse: collapse; /*구분선이 없는 테이블 (구분선이 없어지면서 크기가 조금 줄어듬)*/
    
    /*border-collapse: collapse; /*구분선이 없는 테이블 (구분선이 없어지면서 크기가 조금 줄어듬) ----위에선언됨*/
    width: 370px; /*755의 절반*/
    height:auto; /*밑에 tr로 크기 설정*/
    float:left; /*테이블 두 개 나란히 놓기위함 */
+   
 }
 
+.left-table1 tr { /*사이사이 까만선*/
+   border-top:1px solid black;
+}
+.left-table1 th /*테이블 공통 속성 height*/
+{
+	color: white;
+	background-color: #454550;
+	
+}
+
+.left-table1 td:nth-child(n){ /*업종 왼쪽정렬*/
+   color:white ;
+}
 
 
 .left-table1 tr /*테이블 공통 속성 height*/
@@ -125,7 +151,7 @@ th{
 	width:46.25px;  375의 열의 개수인 4등분 한것.
 }*/
 
-/*중요~~~~~~~~~*/
+/*중요*/
 .left-table1 tr:nth-child(n) td:nth-child(3){ /*애로우를 띄우기위해 width를 조절*/
    width:55px;
 }
@@ -147,12 +173,14 @@ th{
 	text-align:right;
 }
 
-.left-table1 tbody tr:nth-child(odd){ /*홀수 행 색깔변경*/
-   background-color: #E6E6E6;
+
+.left-table1 tbody tr:nth-child(7){ /*다섯번째줄 노란색*/
+	background-color: #fcf2cf;
 }
-.left-table1 tbody tr:nth-child(5){ /*다섯번째줄 노란색*/
-	background-color: #F3E2A9;
+.left-table1 tbody tr:nth-child(7) td:nth-child(1){ /*다섯번째줄 노란색*/
+	color:black;
 }
+
 
 .left-table1 tbody tr:nth-child(1) td:nth-child(n+2){ /*첫번째 tr에서 업종제외하고 나머지는 red*/
 	color: red;
@@ -181,14 +209,29 @@ th{
 	border-bottom: 1px solid #585858;
 	border-collapse: collapse; /*구분선이 없는 테이블 (구분선이 없어지면서 크기가 조금 줄어듬)*/
 	height:auto;
+	table-layout: fixed; /*글자수 제한하기위함 ...을출력하기우해*/
 }
 
-
+.left-table-2 th{ /*테이블 공통속성*/
+	background-color: #454550;
+	color:white;
+}
 .left-table-2 tr{ /*테이블 공통속성*/
 	height:30px;
 }
 
-.left-table-2 tr:nth-child(1) { /*종목명 밑에 까만선 하나*/
+.left-table-2 td{ /*글자수가넘어가면 ...부호를 입력하기 위함 */
+		text-overflow: ellipsis;
+/* 	글자가 넘어갈 경우 생략부호를 표시함(...) */
+/* 	만약 적용이 되지 않는다면 display 속성이 block 또는 inline-block에서만 동작하니 설정 필요 */
+	overflow: hidden;
+/* 	글자가 넘어가는 것은 숨김 처리 */
+	white-space: nowrap;
+/* 	공백 문자가 있는 경우 자동 줄바꿈을 하지 않고 한줄로 표시하게 함 */
+	
+}
+
+.left-table-2 tr:nth-child(n) { /*종목명 밑에 까만선 하나*/
    border-top:1px solid black;   
  
 }
@@ -202,24 +245,43 @@ th{
 }
 
 
-
 .left-table-2 tbody tr:nth-child(n) td:nth-child(n+2) /*첫번째항목은 빼고 나머지 오른쪽 정렬*/
 {    
    text-align: right;
 }
 
-
-
-.left-table-2 tbody tr:nth-child(odd){
-	background-color: #E6E6E6;
+.left-table-2  th:nth-child(1)
+{
+	width:60px;
 }
+
+
 .left-table-2 tbody td:nth-child(n+2)
 {
 	color:red;
 }
+.left-table-2 tbody td:nth-child(1) /*첫줄 다 하얀색*/
+{
+	color:white;
+
+}
 .left-table-2 tbody td:nth-child(5)
 {
-	color:black;
+	color:white;
+}
+
+.left-table-2 tbody tr:nth-child(n+2)
+{
+	color:red;
+}
+
+.left-table-2 tbody tr:nth-child(n+9):nth-child(-n+11) td:nth-child(n+2):nth-child(-n+4)
+{
+	color:white;
+}
+.left-table-2 tbody tr:nth-last-child(1) td:nth-child(n+2):nth-child(-n+4)
+{
+	color:blue;
 }
 
 
@@ -237,6 +299,11 @@ th{
 	background-color: white;
 	border: 1px solid #E6E6E6;
 	height:30px;
+	background-color: #454550;
+	border:1px solid black;
+	
+	
+	
 }
 
 
@@ -247,13 +314,16 @@ th{
 	margin-top:10px;        /*왼쪽 상단과의 간격*/
 	
 	height:50%;
-	background-color: green;
+	width:100%;
+	height:530px;
+	border:1px solid black;
+	
 }
 
 /*왼쪽하단 버튼 많은것*/
 .left-bottom-top-menu 
 {
-	margin-top:1px; 
+	
 	width: 100%;                
 	display:inline-block;   /*메뉴판을 한블럭으로 지정 (간격 조금늘어남)*/
 	height:auto;             /*버튼크기에 맞도록*/
@@ -265,14 +335,13 @@ th{
 	float:left; /*왼쪽 정렬*/
 	height:30px;
     min-width:45px ;
-	margin-right:2px; /*버튼 사이사이 간격*/
-	border:none;
-	background-color: #E6E6E6;/*버튼색깔*/
-	
+    background-color: #454550;
+    
+	border:1px solid black;	
 }
 .left-bottom-top-menu button:nth-child(5) /*매매동향 까맣게*/
 {
-	background-color:  #585858;
+	background-color:  #078b71;
 	color: white;
 }
 
@@ -281,27 +350,29 @@ th{
 	width:100%; /*라인끝에 살짝 띄우기위해 */
 	height:35px;
 	box-sizing:border-box; /*패딩값 막기위함*/
+	border: 1px thick black; /*앞옆뒤 모두 라인생성*/	
 	
 	display:inline-block; /*한라인에 다넣기위해*/
-	border: 1px solid  gray;
-	background-color:#E6E6E6; 
+	background-color: #454550;
 	margin-top:3px; 
-	
-	
-	
 }
+
+
 .left-bottom-top-search select{ /*콤보박스 설정*/
 	margin-top:4px; /*위쪽과의 마진값*/
 	margin-left:8px;
-	
 	width:90px;
 	height:25px;
+	background-color: #454550;
+	color:white;
+	border: 1px solid black; /*앞옆뒤 모두 라인생성*/	
+	
 	
 }
 
 
 .white-search-image{ /*돋보기 이미지 버튼*/
-	background-image: url("돋보기_흰색.png");
+	background-image: url("돋보기_검정.png");
 	width: 26px;
 	height: 26px;
 	
@@ -313,46 +384,78 @@ th{
 }
 
 
+
+
 .search-text /*삼성전자 text*/
 {
-		
+	color:white;
+	background-color: #262933;
+	
 	box-sizing: border-box;
 	width: 80px; /*텍스트를 띄움으로 자동으로 버튼두개가 움직임.*/
 	height: 26px;
-	background-color: #E6E6E6;
 	padding-left: 10px; /*글자를 좀 가운데로 이동*/
-	vertical-align: -1px;
+	vertical-align: -2px;
 	border:inherit;
-	background-color: lightgray;
+		border: 1px solid black; /*앞옆뒤 모두 라인생성*/
 	
+
 }
+
+_::-webkit-:not(:root:root), .search-text {
+	
+		width: 100px;
+}
+
+
+	
+
+/*IE 전용*/
+_:-ms-fullscreen, :root .search-text{
+	width: 87px;
+	}
+/*파이어폭스 전용*/
+@-moz-document url-prefix(){ 
+	.search-text{width: 72px;}
+
+ }
+ /*사파리 전용*/
+
+
+
 
 .search-info-text /*당일 데이터 입력시간 글자*/
 {
 	height: 20px;
-	margin-left:198px;      /*당일데이터입력시간 띄우기 이걸로 버튼 두개 옆으로 땡김.*/
+	margin-left:205px;      /*당일데이터입력시간 띄우기 이걸로 버튼 두개 옆으로 땡김.*/
+	color:white;
 }
 
 /*버튼설정*/
 .search-but1 {
 	height: 26px;
-	
-	vertical-align: -1px;
+	background-color: #454550;
+	color:white;
+	vertical-align: -2px;
+		border:1px solid black;
 	
 }
 .search-but2 {
-	vertical-align: -1px;
-		height: 26px;
-	background-color:  #5E5E5E;
-	color: white;
+	vertical-align: -2px;
+	background-color: #eea817;
+	color:black;
+	height: 26px;
+	border:1px solid black;
 	
 }
 /*--------------------------------------------------바텀 테이블1 시작*/
+
 .left-bottom-div1{ /*바텀 영역지정*/
 	display:inline-block;
-	height:auto;
 	width:100%;
-	margin-top:5px; /**/	
+	height:auto;
+	margin-top:6px; 
+	
 }
 
 .left-bottom-div1-table{ /*년도 적혀있는 테이블 설정*/
@@ -368,6 +471,15 @@ th{
 .left-bottom-div1-table tr{
 	height:30px;
 }
+.left-bottom-div1-table th{
+	background-color: #454550;
+	color:white;
+}
+
+
+.left-bottom-div1-table tbody tr:nth-child(n){
+	border:1px solid black;
+}
 
 
 .left-bottom-div1-table tr:nth-child(1)/* 줄긋기 주의 : boder-collapse가 없으면 실행이안됨*/
@@ -377,7 +489,9 @@ th{
 .left-bottom-div1-table td:nth-child(1){ /*일자 위치조정*/
 	text-align: left;
 	padding-left:10px;
+	
 	width:80px;	
+	color:white;
 }
 
 .left-bottom-div1-table td:nth-child(2){
@@ -398,9 +512,6 @@ th{
 	text-align: right;
 }
 
-.left-bottom-div1-table tr:nth-child(odd) { /*홀수행 색깔변경*/
-	background-color: #EAEAEA;
-}
 
 /*색깔 설정*/
 .left-bottom-div1-table tbody td:nth-child(n+2){ /*전체 td 빨간색*/
@@ -456,7 +567,7 @@ th{
 	height:auto;
 	border-top: 2px solid #585858;
 	border-bottom: 1px solid #585858;
-	border-spacing: 0px 1px; /*각 행을 붙어있게만듦. 순서대로 length initial inherit*/
+	border-collapse:collapse;
 	float:left; /*위에단에다가 left를 걸어줘야 양쪽으로 놓을수있음.*/
 	margin-right:10px;
 	box-sizing: border-box;
@@ -465,21 +576,28 @@ th{
 .left-bottom-div2-table1 th
 {
 	height:30px;
+	color:white;
 	
 }
 .left-bottom-div2-table1 tr
 {
 	height:30px;
+	border-top:1px solid #2e313a;
 	
 }
 
 .left-bottom-div2-table1 thead th:nth-child(n+1):nth-child(-n+2){ /*매도상위 매도수량 바탕색 연한파랑으로*/
-	background-color: #CEECF5; /*연한 블루*/    
+	background-color: #0b2d4a; /*연한 블루*/    
+	
 }
-
+.left-bottom-div2-table1 td
+{
+	color:white;
+	
+}
 .left-bottom-div2-table1 td:nth-child(1) /* 첫번째열 모두 바탕색을 연한블루색으로*/
 {
-	background-color: #CEECF5; /*연한 블루*/
+	background-color: #134268; /*연한 블루*/
 	text-align: center;  
 	width:90px;    
 
@@ -487,20 +605,20 @@ th{
 
 .left-bottom-div2-table1 tbody tr:nth-child(6) td /*모두 연한블루에서 외국계합만 노랑색으로 덮어씌움 */
 {
-	background-color: #F5F6CE; /*연한 노랑*/    
+	background-color: #454550; /*연한 노랑*/    
 
 }
 
 
 .left-bottom-div2-table1 thead th:nth-child(n+3):nth-child(-n+4) /* 매수상위 매수수량 바탕색 연한빩강으로*/
 {
-	background-color: #F5A9A9; /*연한 레드*/    
+	background-color: #4a0b0d; /*연한 레드*/    
 	
 
 }
 
 .left-bottom-div2-table1 tbody td:nth-child(3) {/* 3번째열 바탕색 연한빨강으로*/
-	background-color: #F5A9A9; /*연한 레드*/   
+	background-color: #65161d; /*연한 레드*/   
 	text-align: center;  
 	width:90px;  
 	
@@ -540,13 +658,11 @@ th{
 .left-bottom-div2 span{ /*회사명 글자 */
 	float:right;
 	width:370px;
-	border-top: 1px solid gray;
-	border-bottom: 1px solid gray;
-	height: 28px; /*높이*/
+	border-top: 2px solid #454550;
+	height: 34px; /*높이*/
 	text-align: center;
 	box-sizing:border-box;	
-	background-color: #FBF2EF;
-	margin-bottom: 5px; 
+	color:white;
 	padding-top: 5px; /*글자 간격*/
 	
 
@@ -556,22 +672,27 @@ th{
 	box-sizing:border-box;
 	float:right;
 	width:370px;
-	border-top: 2px solid #585858;
-	border-spacing: 0px 1px; /*각 행을 붙어있게만듦. 순서대로 length initial inherit*/
-	border-bottom: 1px solid #585858;
-	
+	border-top:1px solid black;
+	border-bottom: 1px solid #454550;
+	border-collapse:collapse;
 	
 }
 
-	.left-bottom-div2-table2 tr
+.left-bottom-div2-table2 tr
 {
 	height:30px;
-	}
-
-.left-bottom-div2-table2 tbody tr:nth-child(odd)
-{
-	background-color: #EAEAEA;
+	border-top:1px solid black;
 }
+.left-bottom-div2-table2 th
+{
+	color:white;
+}
+
+.left-bottom-div2-table2 td
+{
+	color:white;
+}
+
 
 
 .left-bottom-div2-table2 tbody tr:nth-child(1)
@@ -610,17 +731,19 @@ th{
 .right-div{ /*오른쪽 상단 블럭 생성*/
 	width: 380px; 
 	height: auto;  /*auto로 바꾸기*/
-	margin-left:15px; /*왼쪽부분과 오른쪽 부분을 띄움*/
-	float: left; /*왼쪽에 left가 있으니 그 다음으로 오기때문에 옆에 생성되게한다.*/
+	background-color:#2e313a; /*블랙*/
+	float: right;
 	
 }
 
 
 .right-div-top-half{/*오른쪽 반절 시작*/
-	width:100%;
-	height: 510px;;  /*auto로 바꾸기*/
-	background-color: gray;	
+	width:380px;
+	height: 512px;  /*auto로 바꾸기*/
+	border:1px solid black;
+	box-sizing: border-box;
 }
+
 
 
 
@@ -629,20 +752,17 @@ th{
 .right-top-menu{
 	width:100%;
 	display:inline-block;
-    	
 
 }
 .right-top-menu button{
 	float:left;
 	min-width:45px ;
-	border:none;
+	border:1px solid black;
 	box-sizing:border-box;
 	height:30px;
-    margin-right:2px;
-	
+    background-color: #454550;
+
 }
-
-
 
 /*---------탑서치-----------*/
 .right-top-search{
@@ -650,10 +770,13 @@ th{
 	display: inline-block; /*한줄로해야하기때문에 반드시 핌요*/
 	width:100%;
 	height:35px;
-	background-color: #EAEAEA;
-	border:1px solid gray;
+	background-color: #454550;
+	border:1px thick;
 	box-sizing: border-box;
+	
+	
 }
+
 
 
 .right-top-search select { /*콤보박스 설정*/
@@ -661,24 +784,27 @@ th{
 	margin-left:8px;
 	width:90px;
 	height:25px;
-	
+	background-color: #454550;
+	border: 1px solid black;
+	color:white;
 }
+
 
 .right-top-menu button:nth-child(1)
 {
-	background-color:  #5E5E5E;
+	background-color: #078b71;
 	color: white;
 }
 
 .search-but3 
 {
 	
-	height:26.5px;
+	height:26px;
 	float:right;
 	margin-top:3.5px; 
 	margin-right:3px; 
-	background-color: white;
-	border: 1px solid gray;
+	background-color: #454550;
+	border: 1px solid #2e313a;
 	
 }
 
@@ -686,18 +812,19 @@ th{
 /*---------한줄 테이블-----------*/
 .right-group1 /*한줄 테이블을 묶기*/
 {
-	height:auto;
+	height:30px;
 	width:100%;
+	
 }
 
 .right-table1
 {
-	
 	margin-top:6px; /*레프트 와 띄우기를 같이해야하기때문에 6px */
-	border-bottom:1px solid #585858 ; /**/
-	border-top:2px solid #585858;
+	border-bottom:1px solid #454550 ; /**/
+	border-top:2px solid #454550;
 	border-collapse: collapse;
 	box-sizing: border-box;
+	color:white;
 	
 }
 .right-table1 thead tr
@@ -713,14 +840,14 @@ th{
 .right-table1 th:nth-child(n+2)
 {
 	width:80px;
-
+	
+	
 }
 
 .right-table1 th:nth-child(1)
 {
 	padding-left:5px;
 	width:20px;
-	
 }
 .right-table1 th:nth-child(n+3):nth-child(-n+5)
 {
@@ -734,29 +861,35 @@ th{
  {
  	height:auto;
 	width:100%;
+	
  }
-
 
 .right-super-table /*제일 상위 테이블*/
 {
-	background-color: white; /*전체배경색**/
+	background-color: #2e313a;
 	
-	width:380px;
-	border-spacing: 0px 1px; /*각 행을 붙어있게만듦. 순서대로 length initial inherit*/
+	width:100%;
 	/*background-color: gray;*/
-	border-top: 2px solid #585858; /*맨위 까만선하나*/
-	border-bottom: 1px solid #585858; /*맨위 까만선하나*/
+	border-top: 2px solid #454550; /*맨위 까만선하나*/
+	border-bottom: 1px solid #454550; /*맨위 까만선하나*/
+	margin-top:3px; /*레프트 와 띄우기를 같이해야하기때문에 6px */
+	border-spacing: 0px 1px; /*각 행을 붙어있게만듦. 순서대로 length initial inherit*/
+	
+	color: white;
 	
 }
 /*각 테이블 셀의높이와 너비*/
 .right-super-table tr
 {
 	height:29px;      /*핵심.....*/
+
+	
 }
 
 .right-super-table th
 {
 	width:76px;
+	background-color: #454550;
 }
 .right-super-table th:nth-child(3) /*세번째칸 좀늘리기*/
 {
@@ -765,6 +898,7 @@ th{
 /*첫째행 위에 까만선하나*/
 .right-super-table th {
 	border-bottom: 1px  solid black;
+	
 }
 /*
 .right-super-table td{
@@ -772,11 +906,26 @@ th{
 }*/
 
 /*전체 배경색*/
-.right-super-table tbody tr:nth-child(-n+5) td:nth-child(-n+3){
-	background-color: #A9BCF5; /*연한블루*/
-	
-	
+.right-super-table tbody tr:nth-child(1) td:nth-child(4){
+	background-color: #2e313a; /*연한블루*/
 }
+.right-super-table tbody tr:nth-child(1){
+	background-color: #134268; /*연한블루*/
+}
+.right-super-table tbody tr:nth-child(2){
+	
+	background-color: #0f3e60; /*연한블루*/
+}
+.right-super-table tbody tr:nth-child(3){
+	background-color: #0f3659; /*연한블루*/
+}
+.right-super-table tbody tr:nth-child(4){
+	background-color: #0d3151; /*연한블루*/
+}
+.right-super-table tbody tr:nth-child(5){
+	background-color: #0b2d4a; /*연한블루*/
+}
+
 
 .right-super-table tbody td:nth-child(n) { /*매도잔량 시간 셀들은 오른쪽 정렬*/
 	text-align: right;
@@ -799,9 +948,10 @@ th{
 
 /*--------------그림있는 sub테이블 1*/
 .sub-table1{
-	border-top:2px solid gray; /*첫번째 행위에 회색선 하나*/
+	border-top:2px solid #454550; /*첫번째 행위에 회색선 하나*/
 	border-collapse:collapse;
-	/*background-color: blue;*/
+	background-color: #2e313a;
+	
 	/*padding :0px ;*/
 	width:100%;
 	height:100%;
@@ -818,12 +968,12 @@ th{
 	margin-top:2px;
 	
 }
-
 /*하얗게*/
 .sub-table1 tbody tr:nth-child(n+1) td:nth-child(n+1)
 {
 		
-	background-color: white;
+	background-color: #2e313a;
+	
 	
 }
 
@@ -855,7 +1005,6 @@ th{
 /*-----------------------서브테이블2 시작--------------*/
 .sub-table2
 {
-	background-color: blue;
 	width:100%;
 	height:100%;
 	border-top:2px solid #585858;
@@ -863,13 +1012,16 @@ th{
 	border-collapse: collapse;
 }
 
+
 .sub-table2 tr:nth-child(n)
 {
-	height: 29px;
+	height: 26px;
+	border-top:1px solid black;
+	
 }
 
 .sub-table2 tbody tr:nth-child(n+4):nth-child(-n+6) td:nth-child(2) { /*전일, 가중 글자 까맣게하기*/
-	color: black;
+	color: white;
 }
 
 /*내부 테이블 내부 배경하얗게 만듦*/
@@ -882,7 +1034,7 @@ th{
 .sub-table2 tbody tr:nth-child(n+1):nth-child(-n+5) td:nth-child(n+1)
 {
 		
-	background-color: white;
+	background-color: #2e313a;
 	
 }
 
@@ -898,14 +1050,24 @@ th{
 
 
 
-
-/*
-.right-super-table tbody tr:nth-child(n+6) td:nth-child(n+2){
-	background-color: #F8E0E0;
+.right-super-table tbody tr:nth-child(6) td:nth-child(n+3){
+	background-color: #480d0e;
 }
-.right-super-table tbody tr:nth-child(n+7) td:nth-child(1){
-	background-color: #F8E0E0;
-}*/
+
+
+.right-super-table tbody tr:nth-child(7) td:nth-child(n+1){
+	background-color: #510f11;
+}
+.right-super-table tbody tr:nth-child(8) td:nth-child(n+1){
+	background-color: #581013;
+}
+.right-super-table tbody tr:nth-child(9) td:nth-child(n+1){
+	background-color: #601117;
+}
+.right-super-table tbody tr:nth-child(10) td:nth-child(n+1){
+	background-color: #65161d;
+}
+
 
 .right-super-table tbody tr:nth-child(6) td:nth-child(2){
 	background-color: red;
@@ -915,59 +1077,65 @@ th{
 	color: red;
 }
 
-.right-super-table tbody tr:nth-child(n+11):nth-child(-n+12) td:nth-child(-n+2) { /*매수잔량과 대비 상한가 가격표 파란색글자로하기*/
-	background-color: #A9BCF5; /*연한블루*/
+.right-super-table tbody tr:nth-child(n+11):nth-child(-n+12) td:nth-child(-n+2) {
+	background-color:#0b2d4a;  /*연한블루*/
+	
 	
 }
 
 .right-super-table tbody tr:nth-child(n+11):nth-child(-n+12) td:nth-child(n+3):nth-child(-n+3) { /*매수잔량과 대비 상한가 가격표 파란색글자로하기*/
-	background-color: white;
 	text-align: center;
+	background-color: #2e313a;
 }
-.right-super-table tbody tr:nth-child(n+11):nth-child(-n+12) td:nth-child(n+4):nth-child(-n+5) { /*매수잔량과 대비 상한가 가격표 파란색글자로하기*/
-	background-color: #F8E0E0;
+.right-super-table tbody tr:nth-child(n+11):nth-child(-n+12) td:nth-child(n+4):nth-child(-n+5) { /*18864,485 진하기조금다르게*/
+	background-color: #480d0e;
+
 	
 }
-
-
-
 /*--------------------------------------------------------------------오른쪽 아래-------------------------------------------------------*/
 .right-div-bottom-half
 {
 	margin-top:10px;
 	width:380px;
-	height: auto;
-	background-color: red;
-	
+	height: 480px;
+	border:1px solid black; 
+	color:white;
+	box-sizing: border-box;
 }
 .right-bottom-menu{
 	display: inline-block;
 	width:100%;
 	height:auto;	
-	margin-top: 1px;
-	margin-bottom: -3px;
 }
 
 
 .right-bottom-menu button
 {
+	
 	width:auto;
 	height:30px;
 	min-width:50px ;
-	border:none;
-	float:left; 
+	border:1px solid black;
+	background-color: #454550;
+	margin-right:-6px;
 }
-
+.right-bottom-menu button:nth-child(1)
+{
+	background-color: red;
+	color: white;
+}
 
 /*오른쪽 마지막 테이블 시작*/
 
 .right-bottom-table
 {
-	flaot:left;
-	border-top:2px solid #585858; 
+	float:left;
+	border-top:2px solid #454550; 
 	width:100%;
 	height: auto;
-	padding-top:5px;
+	padding-top:10px;
+	background-color: #2e313a;
+	
 }
 
 
@@ -975,65 +1143,190 @@ th{
 	text-align: center;
 	width:70px;
 	padding-right:10px;
-	}
-
+}
+.right-bottom-table tr
+{
+	height:33px;
+	
+}
 #Account_number /*계좌번호 셀렉트박스 설정*/
 {
 	width:145px;
 	height:25px;
+	background-color: #2e313a;
+	color:white;
+	border: 1px solid black; /*앞옆뒤 모두 라인생성*/
+
 }
 #right_bottom_password /*비밀번호 텍스트 설정*/
 {
 	width:150px;
+	height:18px;
+	background-color: #2e313a;
+	color:white;
+	border: 1px solid black; /*앞옆뒤 모두 라인생성*/
 }
 
 /* 종목코드 설정*/
 #right-bottom-search 
 {
 	margin-top:-2.5px; /*돋보기와 위치맞추기위해 4px를띄워서 위에 마진값과 비슷하게만들기 위함*/
+	background-color: #2e313a;
+	color:white;
 }
 
 #right-bottom-search select { /* 삼성전자와 돋보기있는 select 설정 */
 	margin-top:4px; /*돋보기와 높이맞추기위함.*/
 	width:90px;
 	height:25px;
-	
+	background-color: #2e313a;
+	color:white;
+	border: 1px solid black; /*앞옆뒤 모두 라인생성*/
 }
 
 #Sales-division
 {
 	width:95px;
 	height:25px;
+	background-color: #2e313a;
+	color:white;
+	border: 1px solid black; /*앞옆뒤 모두 라인생성*/
 }
 
 
 
 #minus
 {
-	background-color: #ffffff; 
+	background-color: #454550; 
 	width: 25px; 
 	height: 25px; 
-	border: 1px solid #c0c0c0;
+	border: 1px solid black;
 	box-sizing:border-box;
 	vertical-align: top;
+	margin-top:2px;
 	padding-bottom: 7px;
 	padding-right:5px;
-	margin-right:-3px;
+	margin-right:-4px;
 	
-	
-
-
+}
+/*IE전용*/
+@media screen and (min-width:0\0) {
+    #minus { 
+    margin-right: -3px;
+    }
 }
 
-#Quantity{ /*매매수량 텍스트 크기 조절*/
+#plus
+{
+	background-color:#454550; 
+	width: 25px; 
+	height: 25px; 
+	border: 1px solid black;
+	box-sizing:border-box;
+	margin-top:2px;
+	
+	vertical-align:top;
+	margin-left:-4px;
+}
+
+
+#text-box{ /*매매수량 텍스트 크기 조절*/
 		width:100px;
+		margin-top:2px;
 		height:21px;
-		border: 1px solid #c0c0c0;
+		border: 1px solid black;
 		border-left: 0px;
+		border-right: 0px;
 		vertical-align: top;
-		
+		text-align: right;
+		background-color:#454550;
+		color:white;
+}
+
+/*주 현금 최대 버튼 설정*/
+.quantity-button
+{
+	margin-top:2.5px;
+	margin-left:-2px;
+	margin-bottom: -2px;
+	
 }
 
 
+.quantity-button button
+{
+	width: auto;
+	height:28px;
+	background-color: white;
+	background-color:#454550;
+	border: 1px solid black;
+}
+/*파이어폭스와 IE 모두 전용*/
+.quantity-button > button {
+	height: auto; 
+	float:left;
+	margin-left:2px;
+}
+#won
+{
+	vertical-align: -6px;
+	margin-left: 5px;
+}
+
+	
+	
+/*신용구분 select박스 설정*/
+#credit_division 
+{
+	margin-top:2px;
+	width:84px;
+	height:25px;
+		border:1px solid black;
+	background-color: #454550;
+	color: white;
+}
+
+#text-box2
+{
+	background-color: lightgray;
+	border: 1px solid gray; 
+	width:145px;
+	margin-top:2px;
+	height:20px;
+	border:1px solid black;
+	background-color: #454550;
+	color: white;
+	
+}
+
+/*마지막 시장가주문 매수 버튼 설정*/
+#right_last_button
+{
+	height:90px;
+	float: right;
+	margin-right:10px;
+	
+}
+#right_last_button button
+{
+	min-width:90px;
+	height:30px;
+}
 
 
+#red-button
+{
+	background-color: red;
+	color: white;
+	border: 0px;
+}
+#white-button
+{
+		border:1px solid black;
+	background-color: #454550;
+	color: white;
+	
+}
+
+
+	

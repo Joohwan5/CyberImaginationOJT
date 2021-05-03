@@ -3,9 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>Insert title here</title>
-        <link rel="stylesheet" type="text/css" href="Cssmain.css">
+        <link rel="stylesheet" type="text/css" href="whiteCss.css">
     </head>
     <body>
+    
         <div id="main">
             <div class="left-div">
                 <div class="left-div-top-half">
@@ -132,6 +133,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    
                     <table class= "left-table-2"><!-- 왼쪽 두번째 테이블 -->
                         <thead>
                             <tr>
@@ -265,14 +267,11 @@
                      <div class="left-bottom-top-search">
                      	<select class="search-select" name="number">
 							<option value="005930">005930</option>
-							<option value="005931">005931</option>
-							<option value="005932">005932</option>
-							<option value="005933">005933</option>
 						</select>
 						<button class="white-search-image"></button>
-						<input class="search-text" type="text" value="삼성전자" />
-						<span class="search-info-text">[당일 데이터 입력시간: 15시 04분, 단위: 주 ]</span> <!-- 입력못하게하기 -->
-						<input class="search-but1"  type="button" value="참고"/>
+							<input class="search-text" type="text" value="삼성전자" />
+							<span class="search-info-text">[당일 데이터 입력시간: 15시 04분, 단위: 주 ]</span> <!-- 입력못하게하기 -->
+							<input class="search-but1"  type="button" value="참고"/>
                      	<input class="search-but2"  type="button" value="조회"/>
                      </div><!--left-bottom-top-search닫음  -->
                      
@@ -466,9 +465,6 @@
             	<div class="right-top-search">
             		  <select  name="number">
 							<option value="005930">005930</option>
-							<option value="005931">005931</option>
-							<option value="005932">005932</option>
-							<option value="005933">005933</option>
 					</select>
 					<button class="white-search-image"></button>
 					<input class="search-text"  type="text" value="삼성전자" />
@@ -531,7 +527,7 @@
 						 			
 						 			<tr>
 						 				<td colspan="1" rowspan="1"></td>
-						 				<td colspan="1" rowspan="1">475</td>
+						 				<td colspan="1" rowspan="1">132</td>
 						 			 	<td colspan="1" rowspan="1"> 1,267,000</td>
 						 			</tr>
 						 			<tr>
@@ -630,8 +626,7 @@
             					<button type ="button">정정</button>
             					<button type ="button">취소</button>
             					
-            			</div><!--right-div-bottom-half 닫음 -->
-            	</div><!--right-bottom-menu 닫음 -->
+            			</div><!--right-bottom-menu 닫음 -->
             	<div class="right-bottom-table">
             		<table class="">
             			<tbody>
@@ -654,9 +649,6 @@
             					<div id="right-bottom-search">
             						<select  name="number">
 										<option value="005930">005930</option>
-										<option value="005931">005931</option>
-										<option value="005932">005932</option>
-										<option value="005933">005933</option>
 									</select>
 									<span>	<button class="white-search-image"></button></span>
 									<span><input class="search-text"  type="text" value="삼성전자" /></span>
@@ -677,42 +669,54 @@
             					<td>
             						<span>
             								<button id="minus"  type="button"><img src="minus.png" width="auto" height="auto"></button>
-            								<input id="Quantity" type="text" >
-            								<img src="plus.png"  width="auto"  height="auto"></span>
-            							    <button type="button">주</button>
-            							     <button type="button">현금</button>
-            							     <button type="button">최대</button>
-            							    
+            								<input id="text-box" type="text" >
+            								<button id="plus"  type="button"><img src="plus.png" width="auto" height="auto"></button></span>
+            								<div class="quantity-button">
+            							    	<button type="button">주</button>
+            							     	<button type="button">현금</button>
+            							     	<button type="button">최대</button>
+            							     </div>
             					</td>
-            					<td><span></span></td>
             				</tr>
             				<tr>
             					<td>매수단가</td>
-            					<td><span></span></td>
-            					<td><span></span></td>
-            					<td><span></span></td>
+            					<td><span><button id="minus"  type="button"><img src="minus.png" width="auto" height="auto"></button>
+            								<input id="text-box" type="text" value="1,264,000" >
+            								<button id="plus"  type="button"><img src="plus.png" width="auto" height="auto"></button><span id ="won">원</span></span>
+            								</td>
+            								
+
             				</tr>
             				<tr>
             					<td>신용구분</td>
-            					<td><span></span></td>
-            					<td><span></span></td>
-            					<td><span></span></td>
+            					<td><span><input type="checkbox" name="xxx" value="신용매수" >신용매수
+            						<select id=credit_division>
+            								<option>신용융자</option>
+            						</select>
+            						
+            					</span>
+            					</td>
             				</tr>
             				<tr>
             					<td></td>
-            					<td><span></span></td>
+            					<td><input id="text-box2" type="text" ></td>
+            					
             				</tr>
             				<tr>
             					<td>주문 번호</td>
-            					<td>
-
-            					</td>
+								<td><input id="text-box2" type="text" ></td>
             				</tr>
             			</tbody>
             		</table>
-            	
-            	
+                    <div id="right_last_button">
+                    		<button id="white-button" type="button" value="시장가주문">시장가주문</button>
+							<button id ="red-button" type="button" value="매수">매수</button>
+                    </div>       
+
+					
             	</div><!-- right-bottom-table 닫음 -->
+            	</div><!--right-div-bottom-half 닫음 -->
+            	
             </div><!--right-div 닫음 -->
         </div> <!--main 닫음 -->
     </body>
